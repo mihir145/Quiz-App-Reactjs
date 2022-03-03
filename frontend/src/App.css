@@ -1,0 +1,28 @@
+body {
+  background: #343a40;
+}
+
+.btn-success {
+  background: #ab55e7;
+  border: none;
+}
+
+.btn-warning {
+  background: #28d4d4;
+  color: white;
+  border: none;
+}
+.btn-success:hover {
+  background: #8335bb;
+}
+.bg-success {
+  background: #ab55e7;
+}
+
+.bg-purple {
+  background: #ab55e7;
+}
+
+footer {
+  background-color: #ab55e7;
+}

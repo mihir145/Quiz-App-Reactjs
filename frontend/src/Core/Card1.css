@@ -1,0 +1,80 @@
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.card-1 {
+  background-repeat: no-repeat;
+  /* border: 1px solid rgb(170, 85, 231); */
+  background-size: 60%;
+  background-position: center;
+  margin-bottom: 30px;
+  overflow: hidden;
+  padding: 10rem 0 0;
+  border-radius: 20px;
+  transition: 500ms ease;
+  height: 320px;
+  box-shadow: 0 0 5px rgb(170, 85, 231);
+}
+
+.card-1:hover {
+  background-size: 80%;
+}
+
+.card-content1 {
+  padding: 1.5rem;
+  width: 100%;
+  background: linear-gradient(
+    hsl(275 75% 62% / 0),
+    hsl(275 75% 62% / 0.4) 20%,
+    hsl(275 75% 62% / 1)
+  );
+  transform: translateY(60%);
+  transition: transform 500ms ease;
+}
+
+.card-title1 {
+  position: relative;
+  width: max-content;
+}
+
+.card-title1::after {
+  content: "";
+  height: 3px;
+  background-color: red;
+  left: calc(1.5rem * -1);
+  bottom: 0;
+  width: calc(100% + 1.5rem);
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 500ms ease;
+}
+
+.card-1:hover .card-content1 {
+  transform: translateY(0%);
+}
+
+.card-1:hover .card-title1::after {
+  transform: scaleX(1);
+}
+
+/* <div className="col-md-3" key={index}>
+                <div
+                  className="card-1"
+                  style={{
+                    backgroundImage: `url("${API}/quiz/photo/${quiz._id}")`,
+                  }}
+                >
+                  <div className="card-content1">
+                    <h4 className="card-title1">{quiz.title}</h4>
+                    <p className="card-body1">{quiz.description}</p>
+                    <Link
+                      className="btn btn-primary"
+                      to={user ? `/quiz/${user._id}/${quiz?._id}` : `/signin`}
+                    >
+                      Take {quiz?.title}
+                    </Link>
+                  </div>
+                </div>
+              </div> */
